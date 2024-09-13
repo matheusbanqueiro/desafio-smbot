@@ -4,15 +4,16 @@ on:
   push:
     branches:
       - main
-      - stagging
+      - staging
   pull_request:
     branches:
       - main
-      - stagging
+      - staging
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:latest
@@ -22,24 +23,20 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
           - 5432:5432
+
     steps:
       - name: 🚀 Checkout Code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-        
 
       - name: 🐍 Set Up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-        
 
       - name: 📦 Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-        
 
       - name: 🔄 Run Migrations
         env:
@@ -51,12 +48,11 @@ jobs:
           DB_NAME: ${{ secrets.DB_NAME }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_HOST: localhost
           DB_PORT: ${{ secrets.DB_PORT }}
         run: |
           echo "Running migrations..."
           python manage.py migrate
-        
 
       - name: 🧪 Run Tests
         env:
@@ -68,9 +64,16 @@ jobs:
           DB_NAME: ${{ secrets.DB_NAME }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_HOST: localhost
           DB_PORT: ${{ secrets.DB_PORT }}
         run: |
           echo "Running tests..."
           python manage.py test
-        
+
+      - name: 🏁 Workflow Complete
+        if: success()
+        run: echo "✅ All steps completed successfully!"
+
+      - name: ❌ Workflow Failed
+        if: failure()
+        run: echo "🚨 Some steps failed. Check the logs for details."
