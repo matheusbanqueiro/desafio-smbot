@@ -42,7 +42,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run migrations
-        env:  # Define as variáveis de ambiente necessárias para o Django
+        env:  
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           DEBUG: ${{ secrets.DEBUG }}
           ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
@@ -51,7 +51,7 @@ jobs:
           python manage.py migrate
 
       - name: Run tests
-        env:  # Define as variáveis de ambiente necessárias para o Django
+        env:  
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           DEBUG: ${{ secrets.DEBUG }}
           ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
