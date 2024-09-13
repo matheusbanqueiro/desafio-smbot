@@ -1,4 +1,4 @@
-name: 🏗️ Django CI Pipeline
+name: 🤖 SMBOT Django Pipeline
 
 on:
   push:
