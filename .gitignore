@@ -1,0 +1,38 @@
+# Ambiente Virtual
+venv/
+.env
+
+# Arquivos de configuração do Python
+__pycache__/
+*.py[cod]
+
+# Arquivos de banco de dados
+db.sqlite3
+
+# Arquivos de cache
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Diretórios de cache
+*.cache/
+*.pyc
+*.pyo
+
+# Arquivos de logs
+*.log
+
+# Arquivos de build
+*.egg-info/
+dist/
+build/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de segurança
+secrets/
+*.pem
+*.key
