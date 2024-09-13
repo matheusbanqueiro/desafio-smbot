@@ -1,4 +1,4 @@
-name: 🤖 SMBOT Django Pipeline
+name: 🤖 ClientConnect Django Pipeline
 
 on:
   push:
