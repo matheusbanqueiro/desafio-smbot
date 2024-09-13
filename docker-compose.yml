@@ -2,7 +2,7 @@ version: '3'
 
 services:
   teste-postgres-compose:
-    image: postgres
+    image: postgres:latest
     environment:
       POSTGRES_USER: smbot
       POSTGRES_PASSWORD: smbot
