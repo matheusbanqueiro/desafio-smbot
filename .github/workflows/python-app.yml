@@ -70,7 +70,7 @@ jobs:
           echo "Running tests..."
           python manage.py test
 
-      - name: 🏁 Workflow Complete
+      - name: 🏁 Workflow Completee
         if: success()
         run: echo "✅ All steps completed successfully!"
 
