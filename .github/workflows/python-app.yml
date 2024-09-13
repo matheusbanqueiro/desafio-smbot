@@ -17,16 +17,11 @@ jobs:
       postgres:
         image: postgres:latest
         env:
-          POSTGRES_DB: custumers
-          POSTGRES_USER: smbot
-          POSTGRES_PASSWORD: smbot
+          POSTGRES_DB: ${{ secrets.DB_NAME }}
+          POSTGRES_USER: ${{ secrets.DB_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
-          - 5432:5432
-        options: > 
-          --health-cmd="pg_isready -U smbot"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
+          - ${{ secrets.DB_PORT }}:5432
     steps:
       - name: Checkout code
         uses: actions/checkout@v3 
@@ -42,19 +37,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run migrations
-        env:  
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          DEBUG: ${{ secrets.DEBUG }}
-          ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
-          DATABASE_URL: postgres://smbot:smbot@localhost:5432/custumers
         run: |
           python manage.py migrate
 
       - name: Run tests
-        env:  
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          DEBUG: ${{ secrets.DEBUG }}
-          ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
-          DATABASE_URL: postgres://smbot:smbot@localhost:5432/custumers
         run: |
           python manage.py test
