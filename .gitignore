@@ -1,6 +1,11 @@
 # Ambiente Virtual
 venv/
 .env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.env.production
 
 # Arquivos de configuração do Python
 __pycache__/
@@ -36,3 +41,6 @@ Thumbs.db
 secrets/
 *.pem
 *.key
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
