@@ -21,7 +21,7 @@ jobs:
           POSTGRES_USER: ${{ secrets.DB_USER }}
           POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
-          - 5432:5432
+          - ${{ secrets.DB_PORT }}:5432
     steps:
       - name: 🚀 Checkout Code
         uses: actions/checkout@v3
