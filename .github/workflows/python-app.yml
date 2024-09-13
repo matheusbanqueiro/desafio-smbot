@@ -4,15 +4,16 @@ on:
   push:
     branches:
       - main
-      - stagging
+      - staging
   pull_request:
     branches:
       - main
-      - stagging
+      - staging
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:latest
@@ -22,6 +23,7 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
           - 5432:5432
+
     steps:
       - name: 🚀 Checkout Code
         uses: actions/checkout@v3
@@ -68,11 +70,10 @@ jobs:
           echo "Running tests..."
           python manage.py test
 
-    # Add a final step to indicate success or failure
-    - name: 🏁 Workflow Complete
-      if: success()
-      run: echo "✅ All steps completed successfully!"
+      - name: 🏁 Workflow Complete
+        if: success()
+        run: echo "✅ All steps completed successfully!"
 
-    - name: ❌ Workflow Failed
-      if: failure()
-      run: echo "🚨 Some steps failed. Check the logs for details."
+      - name: ❌ Workflow Failed
+        if: failure()
+        run: echo "🚨 Some steps failed. Check the logs for details."
