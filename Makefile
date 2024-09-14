@@ -1,3 +1,5 @@
+# Para os comandos funcionar você precisa estar no seu ambiente virtual venv 
+
 .PHONY: help run migrations tests up down ps
 
 # Define a variável BACK_END_LOCAL_URL
