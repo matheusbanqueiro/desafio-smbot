@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - staging
+      - stagging
   pull_request:
     branches:
       - main
-      - staging
+      - stagging
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         ports:
           - 5432:5432
 
-      redis:
+      redis:  
         image: redis:latest
         ports:
           - 6379:6379
@@ -82,13 +82,3 @@ jobs:
         run: |
           echo "Running tests..."
           python manage.py test
-
-      - name: Notify on Failure
-        if: failure()
-        run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "🚨 Build failed on branch ${{ github.ref }}. Check the logs for details."}' https://discordapp.com/api/webhooks/1285331907353120912/TQS7e49_mQ_WOjn2rcNUoU2gt11Yq64l9_JXWi2zG9XVMCAdAJiugv_jkS638LLOsQGi
-
-      - name: Notify on Success
-        if: success()
-        run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "🎉 Build succeeded on branch ${{ github.ref }}!"}' https://discordapp.com/api/webhooks/1285331907353120912/TQS7e49_mQ_WOjn2rcNUoU2gt11Yq64l9_JXWi2zG9XVMCAdAJiugv_jkS638LLOsQGi
