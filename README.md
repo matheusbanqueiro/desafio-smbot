@@ -16,10 +16,11 @@ Este projeto foi desenvolvido como parte do Desafio Técnico para a vaga de Dese
 
 <img src="https://github.com/user-attachments/assets/d26f4f95-e67b-443d-8f65-68380ba211f5" width="30" height="30" alt="Django">
 <img src="https://github.com/user-attachments/assets/b156303a-a9c1-48e6-be7d-0ef199dae49d" width="30" height="30" alt="Redis">
+<img src="https://github.com/user-attachments/assets/2e144951-71fb-467d-8c0b-5bd8942cbc41" width="30" height="30" alt="Celery">
+<img src="https://github.com/user-attachments/assets/8bf836d5-fa8c-4659-be79-8d5a298952e1" width="30" height="30" alt="RabbitMQ">
 <img src="https://github.com/user-attachments/assets/4e2af97a-6d6f-470e-ab02-3eca1ca178ef" width="30" height="30" alt="Postgres">
 <img src="https://github.com/user-attachments/assets/93cc82e1-00a9-4721-a494-f114f4576fd6" width="30" height="30" alt="Docker">
 <img src="https://github.com/user-attachments/assets/b7a95aef-4eed-4f1a-b6e3-0b73dfd874eb" width="30" height="30" alt="Tailwind">
-<img src="https://github.com/user-attachments/assets/celery-icon.png" width="30" height="30" alt="Celery">
 
 ## Ferramentas de Desenvolvimento
 
@@ -56,10 +57,16 @@ Este projeto foi desenvolvido como parte do Desafio Técnico para a vaga de Dese
     make migrations
     ```
 
-5. Pronto, agora rode:
+5. Rode em um terminal o app:
 
     ```bash
     make run
+    ```
+    
+6. Rode em outro terminal o celery:
+
+    ```bash
+    make celery
     ```
 
 Se tudo correu bem, você verá a tela inicial:
@@ -73,4 +80,4 @@ Se tudo correu bem, você verá a tela inicial:
 Para entender melhor, criei alguns documentos no Notion que ajudam tanto iniciantes quanto pessoas que já estão usando Django e precisam tirar dúvidas sobre códigos.
 
 [![Desenrolando Django](https://img.shields.io/badge/Desenrolando_Django-Informational?style=for-the-badge&logo=django&logoColor=white&color=%23006400)](https://cold-mailman-aa4.notion.site/Desenrolando-Django-8681c5f817a3476cbde317a5cac98739?pvs=74)
-[![Desenrolando Redis](https://img.shields.io/badge/Desenrolando_Redis-Informational?style=for-the-badge&logo=django&logoColor=white&color=red)](https://cold-mailman-aa4.notion.site/Desenrolando-Redis-8681c5f817a3476cbde317a5cac98739?pvs=74)
+[![Desenrolando Redis](https://img.shields.io/badge/Desenrolando_Redis-Informational?style=for-the-badge&logo=django&logoColor=white&color=red)](https://cold-mailman-aa4.notion.site/Desenrolando-Redis-Django-10032fcdef508052a6bcdc874349fc57?pvs=74)
