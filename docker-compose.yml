@@ -14,6 +14,15 @@ services:
     networks:
       - postgres-compose-network
 
+  celery_broker:
+    container_name: clientconnect_celery_broker
+    image: rabbitmq:3.8.2
+    restart: always
+    ports:
+      - "5672:5672"
+    networks:
+      - postgres-compose-network
+
 networks: 
   postgres-compose-network:
     driver: bridge

@@ -1,10 +1,8 @@
-from django.shortcuts import render
-from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from django.core.cache import cache
-
+from .tasks import create_contacts
 from .models import Contact
 from .serializers import ContactSerializer
 
@@ -28,6 +26,17 @@ def get_contact(request):
 
     return Response(status=status.HTTP_400_BAD_REQUEST)
   
+@api_view(['POST'])
+def bulk_create_contacts(request):
+    
+    contact_list = request.data.get('contacts', [])
+    if not contact_list:
+        return Response({"error": "No contacts provided"}, status=status.HTTP_400_BAD_REQUEST)
+    
+    # Adiciona a tarefa à fila Celery
+    task = create_contacts.delay(contact_list)
+    
+    return Response({"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
 def contact_manager(request):

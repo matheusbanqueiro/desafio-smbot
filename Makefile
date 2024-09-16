@@ -12,12 +12,14 @@ help:
 	@echo "  make run        - Inicia o servidor Django na URL especificada."
 	@echo "  make migrations - Cria e aplica migrações no banco de dados."
 	@echo "  make tests      - Executa os testes automatizados."
+	@echo "  make celery     - Inicia o Celery Worker"
 	@echo "  make up         - Inicia os containers Docker definidos."
 	@echo "  make down       - Para e remove os containers Docker."
 	@echo "  make ps         - Lista os containers Docker em execução."
 	@echo "===================================="
 	@echo "Lembre-se de estar no ambiente virutal"
 	@echo "===================================="
+	
 run:
 	@echo "Iniciando o servidor Django em $(BACK_END_LOCAL_URL)..."
 	python manage.py runserver $(BACK_END_LOCAL_URL)
@@ -26,6 +28,10 @@ migrations:
 	@echo "Criando e aplicando migrações..."
 	python3 manage.py makemigrations
 	python3 manage.py migrate
+
+celery:
+	@echo "Iniciando Celery Worker"
+	celery -A api_root worker --loglevel=info
 
 tests:
 	@echo "Executando testes..."
