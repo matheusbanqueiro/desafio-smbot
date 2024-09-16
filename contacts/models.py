@@ -3,8 +3,8 @@ import uuid
 
 class Contact(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=150)
-    phone = models.CharField(max_length=20, blank=True, null=True)
+    name = models.CharField(max_length=150, blank=False, null=False)
+    phone = models.CharField(max_length=20, blank=False, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
