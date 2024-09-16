@@ -7,8 +7,10 @@
 
 Este projeto foi desenvolvido como parte do Desafio Técnico para a vaga de Desenvolvedor Backend no Grupo SM.
 
-[![Descrição do Desafio](https://img.shields.io/badge/Descrição_do_Desafio-Informational?style=for-the-badge&logo=google-docs&logoColor=white&color=%239400D4)](https://docs.google.com/document/d/1vb9WExZmk7XXVcp_gMAZ3EK4p8JePjgHS335UGe4vAc/edit?usp=sharing)
-[![Documentação API](https://img.shields.io/badge/Documentação_API-Informational?style=for-the-badge&logo=postman&logoColor=white&color=orange)](https://documenter.getpostman.com/view/29600204/2sAXqng58h)
+[![Descrição do Desafio](https://img.shields.io/badge/Descrição_do_Desafio-Informational?style=for-the-badge&logo=google-docs&logoColor=white&color=3955FF)](https://docs.google.com/document/d/1vb9WExZmk7XXVcp_gMAZ3EK4p8JePjgHS335UGe4vAc/edit?usp=sharing)
+[![Documentação API](https://img.shields.io/badge/Documentação_API-Informational?style=for-the-badge&logo=postman&logoColor=white&color=D400CF)](https://documenter.getpostman.com/view/29600204/2sAXqng58h)
+[![Figma](https://img.shields.io/badge/Figma-Informational?style=for-the-badge&logo=figma&logoColor=white&color=9400D4)](https://www.figma.com/board/4j8PhXe6WIa10wKMLwXPOt/Desafio-SMBOT---Matheus-Banqueiro-Lima?node-id=0-1&t=OXnSNABngLUJKwap-1)
+
 
 ## Tecnologias Principais
 
@@ -71,5 +73,4 @@ Se tudo correu bem, você verá a tela inicial:
 Para entender melhor, criei alguns documentos no Notion que ajudam tanto iniciantes quanto pessoas que já estão usando Django e precisam tirar dúvidas sobre códigos.
 
 [![Desenrolando Django](https://img.shields.io/badge/Desenrolando_Django-Informational?style=for-the-badge&logo=django&logoColor=white&color=%23006400)](https://cold-mailman-aa4.notion.site/Desenrolando-Django-8681c5f817a3476cbde317a5cac98739?pvs=74)
-
 [![Desenrolando Redis](https://img.shields.io/badge/Desenrolando_Redis-Informational?style=for-the-badge&logo=django&logoColor=white&color=red)](https://cold-mailman-aa4.notion.site/Desenrolando-Redis-8681c5f817a3476cbde317a5cac98739?pvs=74)
