@@ -3,7 +3,7 @@
   <img width="120" height="120" align="right" alt="logo SMBOT" src="https://github.com/user-attachments/assets/0893b658-341e-4d28-91a5-b994cb06ecf2">
 </a>
 
-# ConnectClient
+# ClientConnect
 
 Este projeto foi desenvolvido como parte do Desafio Técnico para a vaga de Desenvolvedor Backend no Grupo SM.
 
