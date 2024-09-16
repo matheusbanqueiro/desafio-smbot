@@ -11,24 +11,19 @@ from .serializers import ContactSerializer
 @api_view(['GET'])
 def get_contact(request):
     if request.method == 'GET':
-        # Defina uma chave de cache única
+        
         cache_key = 'all_contacts'
 
-        # Tente obter os dados do cache
         contacts_data = cache.get(cache_key)
 
         if not contacts_data:
-            # Se os dados não estiverem no cache, busque do banco
             contacts = Contact.objects.all()
 
-            # Serialize os dados
             serializer = ContactSerializer(contacts, many=True)
 
-            # Armazene os dados no cache por 60 segundos
             contacts_data = serializer.data
             cache.set(cache_key, contacts_data, timeout=60)
 
-        # Retorne os dados (seja do cache ou da consulta)
         return Response(contacts_data)
 
     return Response(status=status.HTTP_400_BAD_REQUEST)
