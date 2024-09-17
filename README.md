@@ -88,3 +88,6 @@ Para entender melhor, criei alguns documentos no Notion que ajudam tanto inician
 [![Desenrolando Django](https://img.shields.io/badge/Desenrolando_Django-Informational?style=for-the-badge&logo=django&logoColor=white&color=%23006400)](https://cold-mailman-aa4.notion.site/Desenrolando-Django-8681c5f817a3476cbde317a5cac98739?pvs=74)
 [![Desenrolando Redis](https://img.shields.io/badge/Desenrolando_Redis-Informational?style=for-the-badge&logo=django&logoColor=white&color=red)](https://cold-mailman-aa4.notion.site/Desenrolando-Redis-Django-10032fcdef508052a6bcdc874349fc57?pvs=74)
 [![Desenrolando Celery com RabbitMQ](https://img.shields.io/badge/Desenrolando_Celery_com_RabbitMQ-Informational?style=for-the-badge&logo=celery&logoColor=white&color=orange)](https://cold-mailman-aa4.notion.site/Desenrolando-Celery-RabbitMQ-Django-20104b833b7848c28ba7d82d39b56e2b?pvs=4)
+
+---
+## WebHook Discord
