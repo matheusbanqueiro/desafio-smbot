@@ -94,3 +94,5 @@ Para entender melhor, criei alguns documentos no Notion que ajudam tanto inician
 
 Implementei um WebHook no Discord para receber notificações em tempo real sobre eventos do repositório, como commits, pull requests e o status da pipeline. Assim, posso acompanhar facilmente o progresso do projeto diretamente pelo Discord, centralizando a comunicação.
 
+
+<img src="https://github.com/user-attachments/assets/399c6eec-8740-4572-9a8e-f55da1e90614" alt="WebHook Discord" width="600" height="600">
