@@ -6,7 +6,7 @@ from django.utils import timezone
 class ContactModelTest(TestCase):
 
     def setUp(self):
-        # Método chamado antes de cada teste
+       
         self.contact = Contact.objects.create(
             uuid=uuid.uuid4(),
             name="Test User",

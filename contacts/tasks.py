@@ -14,7 +14,6 @@ def create_contacts(contact_list):
             contact = serializer.save()
             contacts_created.append(contact)
         else:
-            # Lidar com erros de validação
             print(f"Validation error for data: {contact_data} - {serializer.errors}")
     
     return [contact.uuid for contact in contacts_created]

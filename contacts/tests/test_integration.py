@@ -7,7 +7,7 @@ import uuid
 class ContactAPITestCase(APITestCase):
 
     def setUp(self):
-        # Configuração inicial para os testes
+        
         self.contact_uuid = uuid.uuid4()
         self.contact = Contact.objects.create(
             uuid=self.contact_uuid,
@@ -16,7 +16,8 @@ class ContactAPITestCase(APITestCase):
         )
         self.contact_url = reverse('get_all_contacts')
         self.manager_url = reverse('contact_manager')
-
+        self.bulk_create_url = reverse('bulk_create_contacts') 
+        
     def test_get_all_contacts(self):
         """Teste de integração para obter todos os contatos"""
         response = self.client.get(self.contact_url)
@@ -57,3 +58,17 @@ class ContactAPITestCase(APITestCase):
         response = self.client.delete(self.manager_url, delete_data, format='json')
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertFalse(Contact.objects.filter(uuid=self.contact.uuid).exists())
+
+    def test_bulk_create_contacts(self):
+        """Teste de integração para criar contatos em massa"""
+        data = {
+            "contacts": [
+                {"name": "Jane Smith", "phone": "1234567890"},
+                {"name": "John Silveira", "phone": "0987654321"}
+            ]
+        }
+        response = self.client.post(self.bulk_create_url, data, format='json')
+        
+        
+        self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
+        self.assertIn('task_id', response.data)
