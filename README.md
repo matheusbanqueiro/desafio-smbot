@@ -73,6 +73,12 @@ Se tudo correu bem, você verá a tela inicial:
 
 <img src="https://github.com/user-attachments/assets/96fdec2e-24ad-4757-9cff-df97906a3b02" alt="API-Home" width="380" height="200">
 
+7. Ficou com dúvida sobre algum comando? Execute:
+
+    ```bash
+    make help
+    ```
+    
 ---
 
 ## Recursos Adicionais
