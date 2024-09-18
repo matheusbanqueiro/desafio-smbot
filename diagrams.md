@@ -8,7 +8,7 @@
 |------------|-----------|
 | ![#3955FF](https://via.placeholder.com/15/3955FF/000000?text=+) | POST  |
 | ![#9400D4](https://via.placeholder.com/15/9400D4/000000?text=+) | GET |
-| ![#D400CF](https://via.placeholder.com/15/D400CF/000000?text=+) | PUT, DELETE |
+| ![#D400CF](https://via.placeholder.com/15/D400CF/000000?text=+) | DELETE, PUT |
 
 
 ```mermaid
@@ -78,4 +78,5 @@ flowchart TD
     class A4,B4,C4,D4,E4,F4,G4 azul; 
     class A5,B5,C5,D5,E5,F5,G5,H5,I5 rosa;
     class A6,B6,C6,D6,E6,F6,G6 rosa;
-
+```
+[![Ir Para Repotório](https://img.shields.io/badge/Ir_Para_Repotório-Informational?style=for-the-badge&logo=github&logoColor=white&color=9400D4)](/)
