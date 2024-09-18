@@ -80,14 +80,11 @@ Se tudo correu bem, você verá a tela inicial:
     ```
     
 ---
+## Driagrama de fluxo - Rotas
 
-## Recursos Adicionais
+Esses diagramas facilitam a análise e o acompanhamento do fluxo de dados e das interações dentro da API, promovendo uma melhor gestão e entendimento do sistema.
 
-Para entender melhor, criei alguns documentos no Notion que ajudam tanto iniciantes quanto pessoas que já estão usando Django e precisam tirar dúvidas sobre códigos.
-
-[![Desenrolando Django](https://img.shields.io/badge/Desenrolando_Django-Informational?style=for-the-badge&logo=django&logoColor=white&color=%23006400)](https://cold-mailman-aa4.notion.site/Desenrolando-Django-8681c5f817a3476cbde317a5cac98739?pvs=74)
-[![Desenrolando Redis](https://img.shields.io/badge/Desenrolando_Redis-Informational?style=for-the-badge&logo=django&logoColor=white&color=red)](https://cold-mailman-aa4.notion.site/Desenrolando-Redis-Django-10032fcdef508052a6bcdc874349fc57?pvs=74)
-[![Desenrolando Celery com RabbitMQ](https://img.shields.io/badge/Desenrolando_Celery_com_RabbitMQ-Informational?style=for-the-badge&logo=celery&logoColor=white&color=orange)](https://cold-mailman-aa4.notion.site/Desenrolando-Celery-RabbitMQ-Django-20104b833b7848c28ba7d82d39b56e2b?pvs=4)
+[![Ver Diagrama de fluxo](https://img.shields.io/badge/Ver_Diagrama_de_fluxo-Informational?style=for-the-badge&logo=mermaid&logoColor=white&color=D400CF)](/diagrams.md)
 
 ---
 ## WebHook Discord
@@ -96,3 +93,13 @@ Implementei um WebHook no Discord para receber notificações em tempo real sobr
 
 
 <img src="https://github.com/user-attachments/assets/399c6eec-8740-4572-9a8e-f55da1e90614" alt="WebHook Discord" width="600" height="600">
+
+---
+
+## Recursos Adicionais
+
+Para entender melhor, criei alguns documentos no Notion que ajudam tanto iniciantes quanto pessoas que já estão usando Django e precisam tirar dúvidas sobre códigos.
+
+[![Desenrolando Django](https://img.shields.io/badge/Desenrolando_Django-Informational?style=for-the-badge&logo=django&logoColor=white&color=%23006400)](https://cold-mailman-aa4.notion.site/Desenrolando-Django-8681c5f817a3476cbde317a5cac98739?pvs=74)
+[![Desenrolando Redis](https://img.shields.io/badge/Desenrolando_Redis-Informational?style=for-the-badge&logo=django&logoColor=white&color=red)](https://cold-mailman-aa4.notion.site/Desenrolando-Redis-Django-10032fcdef508052a6bcdc874349fc57?pvs=74)
+[![Desenrolando Celery com RabbitMQ](https://img.shields.io/badge/Desenrolando_Celery_com_RabbitMQ-Informational?style=for-the-badge&logo=celery&logoColor=white&color=orange)](https://cold-mailman-aa4.notion.site/Desenrolando-Celery-RabbitMQ-Django-20104b833b7848c28ba7d82d39b56e2b?pvs=4)
