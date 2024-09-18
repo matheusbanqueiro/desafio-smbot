@@ -82,7 +82,8 @@ Se tudo correu bem, você verá a tela inicial:
 ---
 ## Driagrama de fluxo - Rotas
 
-Esses diagramas facilitam a análise e o acompanhamento do fluxo de dados e das interações dentro da API, promovendo uma melhor gestão e entendimento do sistema.
+Estes diagramas oferecem uma visão clara e detalhada do fluxo de dados e das interações dentro da API, facilitando a análise, o acompanhamento e a gestão eficiente do sistema. A ferramenta utilizada para a criação desses diagramas foi o [Mermaid](https://mermaid.js.org/)
+.
 
 [![Ver Diagrama de fluxo](https://img.shields.io/badge/Ver_Diagrama_de_fluxo-Informational?style=for-the-badge&logo=mermaid&logoColor=white&color=D400CF)](/diagrams.md)
 
