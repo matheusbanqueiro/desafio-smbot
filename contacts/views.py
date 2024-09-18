@@ -7,7 +7,7 @@ from .models import Contact
 from .serializers import ContactSerializer
 
 @api_view(['GET'])
-def get_all_contact(request):
+def list_contacts(request):
     if request.method == 'GET':
         
         cache_key = 'all_contacts'

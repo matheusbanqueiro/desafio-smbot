@@ -18,7 +18,7 @@ flowchart TD
     classDef rosa fill:#D400CF,stroke:#ffffff,color:#ffffff;
     classDef roxo fill:#9400D4,stroke:#ffffff,color:#ffffff;
 
-    A1[Cliente] --> B1[GET /contact]
+    A1[Cliente] --> B1[GET /list_contacts]
     B1 --> C1[Verificar Cache]
     C1 -->|Dados em Cache| D1[Retornar Dados]
     D1 --> E1[Fim]
