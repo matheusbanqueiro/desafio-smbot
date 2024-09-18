@@ -28,7 +28,7 @@ flowchart TD
     H1 --> I1[Retornar Dados]
     I1 --> E1[Fim]
 
-    A2[Cliente] --> B2[POST /contacts]
+    A2[Cliente] --> B2[POST /bulk_create_contacts]
     B2 --> C2[Verificar Dados]
     C2 -->|Dados Faltando| D2[Retornar Erro]
     D2 --> E2[Fim]
@@ -79,4 +79,4 @@ flowchart TD
     class A5,B5,C5,D5,E5,F5,G5,H5,I5 rosa;
     class A6,B6,C6,D6,E6,F6,G6 rosa;
 ```
-[![Ir Para Repotório](https://img.shields.io/badge/Ir_Para_Repotório-Informational?style=for-the-badge&logo=github&logoColor=white&color=9400D4)](/)
+[![Ir Para Repositório](https://img.shields.io/badge/Ir_Para_Repositório-Informational?style=for-the-badge&logo=github&logoColor=white&color=9400D4)](/)
