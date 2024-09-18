@@ -14,11 +14,11 @@ class ContactAPITestCase(APITestCase):
             name="Test User",
             phone="1234567890"
         )
-        self.contact_url = reverse('list_contactss')
+        self.contact_url = reverse('list_contacts')
         self.manager_url = reverse('contact_manager')
         self.bulk_create_url = reverse('bulk_create_contacts') 
         
-    def test_list_contactss(self):
+    def test_list_contacts(self):
         """Teste de integração para obter todos os contatos"""
         response = self.client.get(self.contact_url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
