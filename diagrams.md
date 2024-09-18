@@ -28,7 +28,7 @@ flowchart TD
     H1 --> I1[Retornar Dados]
     I1 --> E1[Fim]
 
-    A2[Cliente] --> B2[POST /bulk_create_contacts]
+    A2[Cliente] --> B2[POST /bulk_contacts]
     B2 --> C2[Verificar Dados]
     C2 -->|Dados Faltando| D2[Retornar Erro]
     D2 --> E2[Fim]
