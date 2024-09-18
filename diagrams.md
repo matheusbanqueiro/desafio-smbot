@@ -8,7 +8,7 @@
 |------------|-----------|
 | ![#3955FF](https://via.placeholder.com/15/3955FF/000000?text=+) | POST  |
 | ![#9400D4](https://via.placeholder.com/15/9400D4/000000?text=+) | GET |
-| ![#D400CF](https://via.placeholder.com/15/D400CF/000000?text=+) | PUT |
+| ![#D400CF](https://via.placeholder.com/15/D400CF/000000?text=+) | PUT, DELETE |
 
 
 ```mermaid
@@ -17,7 +17,7 @@ flowchart TD
     classDef azul fill:#3955FF,stroke:#ffffff,color:#ffffff;
     classDef rosa fill:#D400CF,stroke:#ffffff,color:#ffffff;
     classDef roxo fill:#9400D4,stroke:#ffffff,color:#ffffff;
-    
+
     A1[Cliente] --> B1[GET /contact]
     B1 --> C1[Verificar Cache]
     C1 -->|Dados em Cache| D1[Retornar Dados]
@@ -63,11 +63,19 @@ flowchart TD
     H5 --> I5[Retornar Dados att]
     I5 --> E5[Fim]
 
+    A6[Cliente] --> B6[DELETE /contact_manager]
+    B6 --> C6[Verificar UUID]
+    C6 -->|UUID Não Fornecido| D6[Retornar Erro]
+    D6 --> E6[Fim]
+    C6 -->|UUID Fornecido| F6[Excluir Contato do BD]
+    F6 --> G6[Retornar Confirmação]
+    G6 --> E6[Fim]
+
     %% Aplicando classes de cores de acordo com o tipo de requisição
     class A1,B1,C1,D1,E1,F1,G1,H1,I1 roxo; 
     class A2,B2,C2,D2,E2,F2,G2 azul;
     class A3,B3,C3,D3,E3,F3,G3,H3 roxo; 
     class A4,B4,C4,D4,E4,F4,G4 azul; 
     class A5,B5,C5,D5,E5,F5,G5,H5,I5 rosa;
-
+    class A6,B6,C6,D6,E6,F6,G6 rosa;
 
